@@ -33,15 +33,11 @@ public class Carro implements Serializable {
 	@Column(name = "Valor")
 	double valor;
 
-	@Column(name = "Descricao")
-	String descricao;
-
 	@Column(name = "Disponivel")
 	boolean disponivel;
 
-	public Carro(int id, String fabricante, String modelo, String placa, String cor, double km, int ano, double valor,
-			String descricao, boolean disponivel) {
-		this.id = id;
+	public Carro(String fabricante, String modelo, String placa, String cor, double km, int ano, double valor,
+			boolean disponivel) {
 		this.fabricante = fabricante;
 		this.modelo = modelo;
 		this.placa = placa;
@@ -49,16 +45,11 @@ public class Carro implements Serializable {
 		this.km = km;
 		this.ano = ano;
 		this.valor = valor;
-		this.descricao = descricao;
 		this.disponivel = disponivel;
 	}
 
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getFabricante() {
@@ -117,14 +108,6 @@ public class Carro implements Serializable {
 		this.valor = valor;
 	}
 
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
 	public boolean isDisponivel() {
 		return disponivel;
 	}
@@ -136,8 +119,7 @@ public class Carro implements Serializable {
 	@Override
 	public String toString() {
 		return "Carro [id=" + id + ", fabricante=" + fabricante + ", modelo=" + modelo + ", placa=" + placa + ", cor="
-				+ cor + ", km=" + km + ", ano=" + ano + ", valor=" + valor + ", descricao=" + descricao
-				+ ", disponivel=" + disponivel + "]";
+				+ cor + ", km=" + km + ", ano=" + ano + ", valor=" + valor + ", disponivel=" + disponivel + "]";
 	}
 
 }
